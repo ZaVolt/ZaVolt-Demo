@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>ZaVolt</title>
+  </head>
+  <body class="loading">
+    <div class="loading-container loading-container--outer">
+      <div class="loading-container loading-container--inner">
+        <img src="./images/zavolt.png" alt="ZaVolt Logo" />
+        <div></div>
+      </div>
+    </div>
+    <script>
+      const loadingContainerOuter = document.querySelector(
+        ".loading-container--outer"
+      );
+      const loadingContainerInner = document.querySelector(
+        ".loading-container--inner"
+      );
+
+      window.addEventListener("load", () => {
+        document.body.classList.remove("loading");
+        setTimeout(() => {}, 2000);
+        setTimeout(() => {
+          loadingContainerOuter.remove();
+          loadingContainerInner.remove();
+          document.body.classList.add("loaded");
+        }, 2500);
+      });
+    </script>
+  </body>
+</html>

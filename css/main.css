@@ -1,0 +1,81 @@
+@import url(https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css);
+
+@import "./variables.css";
+
+body {
+  background-color: #252525;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+body.loaded {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0) scale(1.0, 1.0);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition: all 2.5s ease-in-out;
+  width: 150px;
+  opacity: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.loading-container--outer {
+  background-color: var(--color-primary);
+  opacity: 1;
+}
+
+body.loading .loading-container--outer {
+  width: 150vw;
+}
+
+.loading-container--inner {
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 2s ease-in-out;
+  opacity: 1;
+}
+
+body.loading .loading-container--inner {
+  width: 125vw;
+}
+
+.loading-container--inner img {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-container--inner div {
+  border: 8px solid transparent; /* light gray */
+  border-top: 8px solid var(--color-primary); /* blue */
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  animation: spin 0.75s ease-in-out infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
