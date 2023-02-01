@@ -1,4 +1,7 @@
 :root {
-    --primary: 224, 52, 52;
-    --color-primary: rgb(var(--primary))
+  --primary: 224, 52, 52;
+  --color-primary: rgb(var(--primary));
+  --dark: 20, 20, 20;
+  --color-dark: rgb(var(--dark));
+  --dasharray: 3000;
 }

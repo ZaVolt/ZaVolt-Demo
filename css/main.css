@@ -1,81 +1,53 @@
 @import url(https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css);
 
 @import "./variables.css";
+@import "./animations.css";
 
 body {
-  background-color: #252525;
+  background-color: #fefefe;
   height: 100vh;
   overflow: hidden;
   position: relative;
+  display: grid;
+  place-items: center;
 }
 
-body.loaded {
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+svg#zavolt-logo {
+  transform: scale(0.25);
 }
 
-.loading-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateZ(0) scale(1.0, 1.0);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  transition: all 2.5s ease-in-out;
-  width: 150px;
+path.logoText {
+  stroke-width: 1rem;
+  stroke-dashoffset: 0;
+  stroke-dasharray: var(--dasharray);
   opacity: 0;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
 }
 
-.loading-container--outer {
-  background-color: var(--color-primary);
-  opacity: 1;
+path.logoText--red {
+  fill: var(--color-primary);
 }
 
-body.loading .loading-container--outer {
-  width: 150vw;
+path.logoText--black {
+  fill: var(--color-dark);
 }
 
-.loading-container--inner {
-  background-color: #fefefe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 2s ease-in-out;
-  opacity: 1;
+path.logoText--red.animated {
+  animation: textDraw--red 2s linear;
 }
 
-body.loading .loading-container--inner {
-  width: 125vw;
+path.logoText--black.animated {
+  animation: textDraw--black 2s linear;
 }
 
-.loading-container--inner img {
-  border-radius: 50%;
-  width: 125px;
-  height: 125px;
+.zv-logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.25);
+  fill-opacity: 0;
+  /* transition: fill-opacity 2s linear; */
 }
 
-.loading-container--inner div {
-  border: 8px solid transparent; /* light gray */
-  border-top: 8px solid var(--color-primary); /* blue */
-  border-radius: 50%;
-  width: 140px;
-  height: 140px;
-  animation: spin 0.75s ease-in-out infinite;
-}
-
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.zv-logo.animated {
+  fill-opacity: 1;
 }

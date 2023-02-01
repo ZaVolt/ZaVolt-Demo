@@ -1,0 +1,27 @@
+@keyframes textDraw--red {
+    0% {
+      fill: rgb(255, 255, 255, 0);
+      stroke: var(--color-primary);
+      stroke-dashoffset: var(--dasharray);
+      opacity: 1;
+    }
+    100% {
+      fill: rgb(var(--primary), 0);
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes textDraw--black {
+    0% {
+      fill: rgb(255, 255, 255, 0);
+      stroke: var(--color-dark);
+      stroke-dashoffset: var(--dasharray);
+      opacity: 1;
+    }
+    100% {
+      fill: rgb(var(--dark), 0);
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }    
+  }
