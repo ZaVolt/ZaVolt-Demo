@@ -8,16 +8,17 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  display: grid;
-  place-items: center;
 }
 
 svg#zavolt-logo {
-  transform: scale(0.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.25);
 }
 
 path.logoText {
-  stroke-width: 1rem;
+  /* stroke-width: 1rem; */
   stroke-dashoffset: 0;
   stroke-dasharray: var(--dasharray);
   opacity: 0;
@@ -50,7 +51,7 @@ path.logoText--black.animated {
 
 .zv-logo.animated {
   /* fill-opacity: 1; */
-  animation: appear 1500ms linear forwards;
+  animation: appear 1900ms linear forwards;
 }
 
 @keyframes appear {

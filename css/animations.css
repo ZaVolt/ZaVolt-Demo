@@ -13,7 +13,7 @@
       fill: rgb(var(--primary), 0);
       stroke-dashoffset: 0;
       opacity: 1;
-      stroke-width: 0.1rem;
+      /* stroke-width: 0.1rem; */
     }
   }
   
@@ -33,6 +33,6 @@
       fill: rgb(var(--dark), 0);
       stroke-dashoffset: 0;
       opacity: 1;
-      stroke-width: 0.1rem;
+      /* stroke-width: 0.1rem; */
     }    
   }
