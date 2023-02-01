@@ -5,10 +5,15 @@
       stroke-dashoffset: var(--dasharray);
       opacity: 1;
     }
+
+    /* 50% {
+        stroke-width: 1rem;
+    } */
     100% {
       fill: rgb(var(--primary), 0);
       stroke-dashoffset: 0;
       opacity: 1;
+      stroke-width: 0.1rem;
     }
   }
   
@@ -19,9 +24,15 @@
       stroke-dashoffset: var(--dasharray);
       opacity: 1;
     }
+
+    /* 50% {
+        stroke-width: 1rem;
+    } */
+
     100% {
       fill: rgb(var(--dark), 0);
       stroke-dashoffset: 0;
       opacity: 1;
+      stroke-width: 0.1rem;
     }    
   }

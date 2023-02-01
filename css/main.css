@@ -49,5 +49,12 @@ path.logoText--black.animated {
 }
 
 .zv-logo.animated {
-  fill-opacity: 1;
+  /* fill-opacity: 1; */
+  animation: appear 1500ms linear forwards;
+}
+
+@keyframes appear {
+  to {
+    fill-opacity: 1;
+  }
 }

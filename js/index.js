@@ -9,15 +9,9 @@ const logoTextAll = document.querySelectorAll(".logoText");
 window.addEventListener("load", () => {
   logoTextRedPaths.forEach((p) => p.classList.add("animated"));
   logoTextBlackPaths.forEach((p) => p.classList.add("animated"));
-
-  //   logoTextAll.forEach((p) => {
-  //     p.style.opacity = 1;
-  //   });
+  svgImg.classList.add("animated");
 });
 
 setTimeout(() => {
-  // logoTextRedPaths.forEach((p) => p.classList.add("loaded"));
-  // logoTextBlackPaths.forEach((p) => p.classList.add("loaded"));
   svg.remove();
-  svgImg.classList.add("animated");
-}, 1000);
+}, 2000);
